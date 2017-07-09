@@ -1,0 +1,13 @@
+$navigators: ("", "-webkit-", "-moz-", "-o-", "-ms-");
+
+@mixin my-transition( $time ) {
+	@each $navigator in $navigators {
+		#{$navigator}transition: $time all ease-in-out;
+	}
+}
+
+@mixin my-border-radius( $border-radius ) {
+	@each $navigator in $navigators {
+		#{$navigator}border-radius: $border-radius;
+	}
+}
