@@ -13,7 +13,6 @@ body {
 	margin : 0;
 	font-family: sans-serif;
 	font-size: 12px;
-	overflow-x: hidden;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Lato');
@@ -58,8 +57,23 @@ a:focus {
  	}
 
  	.menu {
- 		text-align: right;
  		margin: 0;
+ 	}
+
+ 	@media only screen and ( max-width: 767px ) {
+ 		.menu {
+ 			margin: 10px 0;
+ 		}
+ 	}
+
+ 	@media only screen and ( min-width: 768px ) {
+ 		.menu {
+ 			text-align: right;
+ 		}
+
+ 		.navbar-collapse {
+ 			padding: 0;
+ 		}
  	}
 
  	.menu,
@@ -80,6 +94,13 @@ a:focus {
  		}
  	}
 
+ 	.navbar-toggle {
+ 		color: $white;
+ 		font-size: 24px;
+ 		float: left;
+ 		border-color: $white;
+ 	}
+
  	.menu-dropdown {
  		margin: 38px 0 0 0;
 
@@ -89,7 +110,7 @@ a:focus {
  			&:hover {
 
  				.submenu {
- 					visibility: visible;
+ 					display: block;
  				}
  			}
 
@@ -97,8 +118,7 @@ a:focus {
  				position: absolute;
  				top: auto;
  				z-index: 10;
- 				visibility: hidden;
- 				width: 768px;
+ 				display: none;
  				background: $white;
  				padding: 10px;
  				border: 2px solid $pink;
@@ -152,8 +172,31 @@ a:focus {
  		}
  	}
 
- 	.search-box {
- 		margin-top: 30px;
+ 	@media only screen and ( min-width: 768px ) {
+ 		.submenu {
+ 			width: 750px;
+ 		}
+ 	}
+
+ 	@media only screen and ( min-width: 768px ) {
+ 		.search-box {
+ 			margin-top: 30px;
+ 		}
+ 	}
+
+ 	@media only screen and ( min-width: 768px ) {
+ 		.input-search {
+ 			width: 80%;
+ 		}
+ 	}
+
+ 	@media only screen and ( max-width: 767px ) {
+ 		.input-search {
+ 			width: 90%;
+ 		}
+ 	}
+
+ 	.search-box { 		
 
  		.form-search {
  			margin: 0;
@@ -164,7 +207,6 @@ a:focus {
  			border-bottom: 2px solid $gray;
  			background: transparent;
  			color: $gray;
- 			width: 80%;
  		}
 
  		.btn-search {
@@ -174,9 +216,15 @@ a:focus {
  		}
  	}
 
+ 	@media only screen and ( min-width: 768px ) {
+ 		.cart {
+ 			float: right;
+ 			width: 65%;
+ 		}
+ 	}
+
  	.cart {
  		margin-top: 20px;
- 		width: 65%;
 
  		.icon {
  			font-size: 34px;
@@ -286,6 +334,20 @@ a:focus {
 	}
 }
 
+@media only screen and ( min-width: 768px ) {
+	.newsletter-info,
+	.form-newsletter {
+		margin-bottom: 5em;
+	}
+}
+
+@media only screen and ( max-width: 767px ) {
+	.newsletter-info,
+	.form-newsletter {
+		margin-bottom: 10px;
+	}
+}
+
 .newsletter-section {
 	width: 100%;
 	padding: 10px 0 40px 0;
@@ -298,11 +360,6 @@ a:focus {
 	.newsletter-info {
 		text-transform: uppercase;
 		font-weight: 600;
-	}
-
-	.newsletter-info,
-	.form-newsletter {
-		margin-bottom: 5em;
 	}
 
 	.newsletter-box {
@@ -370,6 +427,28 @@ a:focus {
 	.widget-footer-title {
 		font-weight: 600;
 		font-size: 14px;
+	}
+}
+
+@media only screen and ( max-width: 767px ) {
+	.footer {
+
+		.widgets-footer {
+			text-align: left;
+		}
+	}
+}
+
+@media only screen and ( min-width: 768px ) {
+	.footer {
+
+		#widget-footer-2 {
+			text-align: center;
+		}
+
+		#widget-footer-3 {
+			text-align: right;
+		}
 	}
 }
 
@@ -449,5 +528,17 @@ a:focus {
 		display: block;
 		color: $light-gray;
 		font-size: 10px;
+	}
+}
+
+@media only screen and ( min-width: 768px ) {
+	.design-by {
+		float: right;
+	}
+}
+
+@media only screen and ( max-width: 767px ) {
+	.design-by {
+		margin-top: 5px;
 	}
 }
