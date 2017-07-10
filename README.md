@@ -1,4 +1,4 @@
 # Teste Frontend
 Avaliação para a empresa 5A
 
-O objetivo do teste era codificar o layout e deixá-lo o mais parecido possível com o layout contido na raiz desse repositório.
+O objetivo do teste era codificar o layout enviado e deixá-lo o mais parecido possível. O layout está disponível na raiz desse repositório para comparação.
